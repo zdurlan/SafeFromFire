@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
+@property (weak, nonatomic) IBOutlet UIButton *skipButton;
 
+- (IBAction)didTapSkip:(id)sender;
+- (IBAction)didTapRegister:(id)sender;
 @end
 

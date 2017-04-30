@@ -17,6 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[UITabBar appearance] setTintColor:[UIColor blackColor]];
+    
+    // Add this code to change StateNormal text Color,
+    [UITabBarItem.appearance setTitleTextAttributes:
+     @{NSForegroundColorAttributeName : [UIColor lightGrayColor]}
+                                           forState:UIControlStateNormal];
+    
+    // then if StateSelected should be different, you should add this code
+    [UITabBarItem.appearance setTitleTextAttributes:
+     @{NSForegroundColorAttributeName : [UIColor blackColor]}
+                                           forState:UIControlStateSelected];
     return YES;
 }
 
